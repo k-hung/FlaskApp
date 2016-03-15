@@ -110,3 +110,47 @@ END$$
 DELIMITER ;
 
 ##Part 3 Ends.
+
+##Part 4 Begins Below:
+##  sp_GetWishByID - Stored Procedure to fetch data from the database.
+##                 - to get particular wish details using the wish ID and user ID.
+USE `BucketList`;
+DROP procedure IF EXISTS `BucketList`.`sp_GetWishById`;
+DELIMITER $$ 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishById`(
+IN p_wish_id bigint,
+In p_user_id bigint
+)
+BEGIN
+select * from tbl_wish where wish_id = p_wish_id and wish_user_id = p_user_id;
+END$$
+DELIMITER ;
+
+##  sp_update Wish - Stored Procedure to update wishes after editing.
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateWish`(
+IN p_title varchar(45),
+IN p_description varchar(1000),
+IN p_wish_id bigint,
+In p_user_id bigint
+)
+BEGIN
+update tbl_wish set wish_title = p_title,wish_description = p_description
+    where wish_id = p_wish_id and wish_user_id = p_user_id;
+END$$
+DELIMITER ;
+
+##  sp_deleteWish - Stored Procedure to delete a wish.
+## The procedure takes in the wish ID and user ID and deletes the corresponding wish from the database.
+DELIMITER $$
+USE `BucketList`$$
+CREATE PROCEDURE `sp_deleteWish` (
+IN p_wish_id bigint,
+IN p_user_id bigint
+)
+BEGIN
+delete from tbl_wish where wish_id = p_wish_id and wish_user_id = p_user_id;
+END$$
+DELIMITER ;
+
+##Part 4 Ends

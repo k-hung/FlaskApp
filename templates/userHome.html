@@ -13,105 +13,178 @@
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
  <script>
-  $(function(){
-    GetWishes();
-    $('#btnUpdate').click(function(){
-      $.ajax({
-      url : '/updateWish',
-      data : {title:$('#editTitle').val(),description:$('#editDescription').val(),id:localStorage.getItem('editId')},
-      type : 'POST',
-      success: function(res){
-        
-      $('#editModal').modal('hide');
-                  
-        GetWishes();
-    
-      },
-      error: function(error){
-        console.log(error);
-      }
-    });
-    });
-  });
+	$(function(){
+		
+		GetWishes(1);
+		$('#btnUpdate').click(function(){
+			$.ajax({
+			url : '/updateWish',
+			data : {title:$('#editTitle').val(),description:$('#editDescription').val(),id:localStorage.getItem('editId')},
+			type : 'POST',
+			success: function(res){
+				
 
-  function GetWishes(){
-    $.ajax({
-      url : '/getWish',
-      type : 'GET',
-      success: function(res){
-       
-        var wishObj = JSON.parse(res);
-        $('#ulist').empty();
-        $('#listTemplate').tmpl(wishObj).appendTo('#ulist');
+			$('#editModal').modal('hide');
+							    
+				GetWishes(1);
+				
+				
 
-      },
-      error: function(error){
-        console.log(error);
-      }
-    });
-  }
+				
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+		});
 
-  function ConfirmDelete(elem){
-    localStorage.setItem('deleteId',$(elem).attr('data-id'));
-    $('#deleteModal').modal();
-  }
+		$('document').on('click','.navigation li a',function(){
+			console.log('me in');
+		});
+	});
 
-  function Delete(){
-    $.ajax({
-      url : '/deleteWish',
-      data : {id:localStorage.getItem('deleteId')},
-      type : 'POST',
-      success: function(res){
-        var result = JSON.parse(res);
-        if(result.status == 'OK'){
-          $('#deleteModal').modal('hide');
-          GetWishes();
-        }
-        else{
-          alert(result.status); 
-        }
-      },
-      error: function(error){
-        console.log(error);
-      }
-    });
-  }
+	function GetWishes(_page){
+		
+		var _offset = (_page - 1) * 2;
+		$.ajax({
+			url : '/getWish',
+			type : 'POST',
+			data : {offset:_offset},
+			success: function(res){
 
-  function Edit(elm){
-    localStorage.setItem('editId',$(elm).attr('data-id'));
-    $.ajax({
-      url : '/getWishById',
-      data : {id:$(elm).attr('data-id')},
-      type : 'POST',
-      success: function(res){
-        
-        var data = JSON.parse(res);
+				var itemsPerPage = 2;				
+				var wishObj = JSON.parse(res);
+				
+				$('#ulist').empty();
+				$('#listTemplate').tmpl(wishObj[0]).appendTo('#ulist');
 
-        $('#editTitle').val(data[0]['Title']);
-        $('#editDescription').val(data[0]['Description']);
-        $('#editModal').modal();
-        
-        
+				var total = wishObj[1]['total'];
+				var pageCount = total/itemsPerPage;
+				var pageRem = total%itemsPerPage;
+				
+				if(pageRem !=0 ){
+					pageCount = Math.floor(pageCount)+1;
+				}
+		
+				$('.pagination').empty();
 
-        
-      },
-      error: function(error){
-        console.log(error);
-      }
-    });
-  }
+ 				var pageStart = $('#hdnStart').val();
+				var pageEnd = $('#hdnEnd').val();
+
+				if(pageStart>5){
+					var aPrev = $('<a/>').attr({'href':'#'},{'aria-label':'Previous'})
+				.append($('<span/>').attr('aria-hidden','true').html('&laquo;'));
+
+				$(aPrev).click(function(){
+					$('#hdnStart').val(Number(pageStart) - 5);
+					$('#hdnEnd').val(Number(pageStart) - 5 + 4);
+					GetWishes(Number(pageStart) - 5);
+				});
+
+				var prevLink = $('<li/>').append(aPrev);
+				$('.pagination').append(prevLink);
+				}
+				
+				
+				
+				for(var i=Number(pageStart);i<=Number(pageEnd);i++){
+					
+					if (i > pageCount){
+						break;
+					}
+
+					
+					var aPage = $('<a/>').attr('href','#').text(i);
+					
+					$(aPage).click(function(i){
+						return function(){
+							GetWishes(i);
+						}
+					}(i));
+					var page = $('<li/>').append(aPage);
+
+					if((_page)==i){
+						$(page).attr('class','active');
+					}
+					
+					$('.pagination').append(page);
+					
+					
+				}
+				if ((Number(pageStart) + 5) <= pageCount){
+					var nextLink = $('<li/>').append($('<a/>').attr({'href':'#'},{'aria-label':'Next'})
+					.append($('<span/>').attr('aria-hidden','true').html('&raquo;').click(function(){
+							$('#hdnStart').val(Number(pageStart) + 5);
+							$('#hdnEnd').val(Number(pageStart) + 5 + 4);
+							GetWishes(Number(pageStart) + 5);
+						
+					})));
+					$('.pagination').append(nextLink);
+				}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+
+	function ConfirmDelete(elem){
+		localStorage.setItem('deleteId',$(elem).attr('data-id'));
+		$('#deleteModal').modal();
+	}
+
+	function Delete(){
+		$.ajax({
+			url : '/deleteWish',
+			data : {id:localStorage.getItem('deleteId')},
+			type : 'POST',
+			success: function(res){
+				var result = JSON.parse(res);
+				if(result.status == 'OK'){
+					$('#deleteModal').modal('hide');
+					GetWishes();
+				}
+				else{
+					alert(result.status);	
+				}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+
+	function Edit(elm){
+		localStorage.setItem('editId',$(elm).attr('data-id'));
+		$.ajax({
+			url : '/getWishById',
+			data : {id:$(elm).attr('data-id')},
+			type : 'POST',
+			success: function(res){
+				
+				var data = JSON.parse(res);
+
+				$('#editTitle').val(data[0]['Title']);
+				$('#editDescription').val(data[0]['Description']);
+				$('#editModal').modal();
+				
+				
+
+				
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
     </script>
     
    <style>
-     .trash { color:rgb(209, 91, 71); }
 
-
-
-
-.panel-body .checkbox { display:inline-block;margin:0px; }
-
-
-.list-group { margin-bottom:0px; }
+    .trash { color:rgb(209, 91, 71); }
+	.panel-body .checkbox { display:inline-block;margin:0px; }
+	.list-group { margin-bottom:0px; }
+   
    </style>
    
   </head>
@@ -122,8 +195,7 @@
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="#">Home</a></li>
-            <li role="presentation"><a href="/showAddWish">Add Wish</a></li>
+	    <li role="presentation"><a href="/showAddWish">Add Wish</a></li>
             <li role="presentation" class="active"><a href="/logout">Logout</a></li>
           </ul>
         </nav>
@@ -132,20 +204,18 @@
 
      
         <script id="listTemplate" type="text/x-jQuery-tmpl">
-       <li class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    ${Title}
-                                </label>
-                            </div>
-                            <div class="pull-right action-buttons">
-                                <a data-id=${Id} onclick="Edit(this)" ><span class="glyphicon glyphicon-pencil"></span></a>
-                               <a data-id=${Id} onclick="ConfirmDelete(this)" ><span class="glyphicon glyphicon-trash"></span></a>
-                            </div>
-                        </li>
+       		<li class="list-group-item">
+                <div class="checkbox">
+                    <label>
+                        ${Title}
+                    </label>
+                </div>
+                <div class="pull-right action-buttons">
+                    <a data-id=${Id} onclick="Edit(this)" ><span class="glyphicon glyphicon-pencil"></span></a>
+                   <a data-id=${Id} onclick="ConfirmDelete(this)" ><span class="glyphicon glyphicon-trash"></span></a>
+                </div>
+            </li>
     </script>
-
-  
 
     <div class="row">
         <div class="col-md-12">
@@ -157,6 +227,11 @@
  
                         
                     </ul>
+		    <nav>
+  <ul class="pagination">
+    
+  </ul>
+</nav>
                 </div>
                 
             </div>
@@ -191,11 +266,7 @@
   </div>
 </div>
 
-
-
-
-
-       <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="text-align:center;">
@@ -210,15 +281,14 @@
   </div>
 </div>
      
-
-      
+<input type="hidden" id="hdnStart" value="1" />
+<input type="hidden" id="hdnEnd" value="5"/>
 
       <footer class="footer">
-        <p>&copy; Company 2015</p>
+        <p>&copy; Company 2016</p>
       </footer>
 
     </div>
-
 
   </body>
 </html>

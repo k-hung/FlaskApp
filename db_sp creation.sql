@@ -1,9 +1,9 @@
 
 ##Part 1 Begins Below:
 ##  tbl_user - Database Implementation for users.
-drop database if exists BucketList;
-create database BucketList;
-use BucketList;
+DROP DATABASE IF EXISTS BucketList;
+CREATE DATABASE BucketList;
+USE BucketList;
 CREATE TABLE `BucketList`.`tbl_user` (
   `user_id` bigint NOT NULL AUTO_INCREMENT,
   `user_name` varchar(225) NULL,
@@ -73,10 +73,8 @@ CREATE TABLE `tbl_wish` (
 ALTER TABLE tbl_wish AUTO_INCREMENT = 1; ##Ensures that wish ID's start from 1.
 
 ##  sp_addWish - STORED PROCEDURE - to add items to the tbl_wish table.
-USE `BucketList`;
-DROP procedure IF EXISTS `BucketList`.`sp_addWish`;
+DROP PROCEDURE IF EXISTS `sp_addWish`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_addWish`(
     IN p_title varchar(45),
     IN p_description varchar(1000),
@@ -100,10 +98,8 @@ END$$
 DELIMITER ;
 
 ##  sp_GetWishByUser - STORED PROCEDURE - to retrieve a wish.
-USE `BucketList`;
-DROP procedure IF EXISTS `sp_GetWishByUser`;
+DROP PROCEDURE IF EXISTS `sp_GetWishByUser`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE PROCEDURE `sp_GetWishByUser` (
 IN p_user_id bigint
 )
@@ -117,8 +113,7 @@ DELIMITER ;
 ##Part 4 Begins Below:
 ##  sp_GetWishByID - STORED PROCEDURE - to fetch data from the database.
 ##                 - to get particular wish details using the wish ID and user ID.
-USE `BucketList`;
-DROP procedure IF EXISTS `BucketList`.`sp_GetWishById`;
+DROP PROCEDURE IF EXISTS `sp_GetWishById`;
 DELIMITER $$ 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishById`(
 IN p_wish_id bigint,
@@ -144,7 +139,7 @@ END$$
 DELIMITER ;
 
 ##  sp_deleteWish - STORED PROCEDURE - to delete a wish.
-## The procedure takes in the wish ID and user ID and deletes the corresponding wish from the database.
+## The PROCEDURE takes in the wish ID and user ID and deletes the corresponding wish from the database.
 DELIMITER $$
 USE `BucketList`$$
 CREATE PROCEDURE `sp_deleteWish` (
@@ -160,8 +155,7 @@ DELIMITER ;
 
 ##Part 5 Begins Below:
 ##  sp_GetWishByUser - STORED PROCEDURE - to get wish by user
-USE `BucketList`;
-DROP procedure IF EXISTS `sp_GetWishByUser`;
+DROP PROCEDURE IF EXISTS `sp_GetWishByUser`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishByUser`(
 IN p_user_id bigint,
@@ -178,10 +172,8 @@ DELIMITER ;
 
 ## sp_GetWishByUser - STORED PROCEDURE - modify for Pagination Update for Pages.
 ## added a new output parameter called p_total and selected the total count of the wishes based on the user id.
-USE `BucketList`;
-DROP procedure IF EXISTS `sp_GetWishByUser`;
+DROP PROCEDURE IF EXISTS `sp_GetWishByUser`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishByUser`(
 IN p_user_id bigint,
 IN p_limit int,
@@ -189,9 +181,7 @@ IN p_offset int,
 out p_total bigint
 )
 BEGIN
-     
     select count(*) into p_total from tbl_wish where wish_user_id = p_user_id;
- 
     SET @t1 = CONCAT( 'select * from tbl_wish where wish_user_id = ', p_user_id, ' order by wish_date desc limit ',p_limit,' offset ',p_offset);
     PREPARE stmt FROM @t1;
     EXECUTE stmt;
@@ -208,12 +198,9 @@ ADD COLUMN `wish_file_path` VARCHAR(200) NULL AFTER `wish_date`,
 ADD COLUMN `wish_accomplished` INT NULL DEFAULT 0 AFTER `wish_file_path`,
 ADD COLUMN `wish_private` INT NULL DEFAULT 0 AFTER `wish_accomplished`;
 
-##  sp_addWish - STORED PROCEDURE - to include the newly added fields to the database. 
-USE `BucketList`;
-DROP procedure IF EXISTS `sp_addWish`;
- 
+##  sp_addWish - STORED PROCEDURE - to include the newly added fields to the database. =
+DROP PROCEDURE IF EXISTS `sp_addWish`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_addWish`(
     IN p_title varchar(45),
     IN p_description varchar(1000),
@@ -246,11 +233,8 @@ END$$
 DELIMITER ;
 
 ##  sp_updateWish - STORED PROCEDURE - to include the three newly added fields.
-USE `BucketList`;
-DROP procedure IF EXISTS `sp_updateWish`;
- 
+DROP PROCEDURE IF EXISTS `sp_updateWish`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateWish`(
 IN p_title varchar(45),
 IN p_description varchar(1000),
@@ -272,16 +256,19 @@ END$$
 DELIMITER ;
 
 ##  sp_GetWishById - STORED PROCEDURE - to include the additional fields as shown: 
+DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishById`(
 IN p_wish_id bigint,
 In p_user_id bigint
 )
 BEGIN
 select wish_id,wish_title,wish_description,wish_file_path,wish_private,wish_accomplished from tbl_wish where wish_id = p_wish_id and wish_user_id = p_user_id;
-END
+END$$
+DELIMITER ;
 
 ##  sp_updateWish - STORED PROCEDURE - to include the newly added fields.
 DELIMITER $$
+DROP PROCEDURE IF EXISTS `sp_updateWish`;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateWish`(
 IN p_title varchar(45),
 IN p_description varchar(1000),
@@ -299,16 +286,16 @@ update tbl_wish set
     wish_private = p_is_private,
     wish_accomplished = p_is_done
     where wish_id = p_wish_id and wish_user_id = p_user_id;
-END
+END$$
+DELIMITER ;
 
 ##Part 6 Ends.
 
 ##Part 7 Begins Below:
 ##  sp_GetAllWishes - STORED PROCEDURE - to fetch the data from the database to populate the dashboard.
 USE `BucketList`;
-DROP procedure IF EXISTS `sp_GetAllWishes`;
+DROP PROCEDURE IF EXISTS `sp_GetAllWishes`;
 DELIMITER $$
-USE `BucketList`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetAllWishes`()
 BEGIN
     select wish_id,wish_title,wish_description,wish_file_path from tbl_wish where wish_private = 0;
@@ -325,6 +312,7 @@ CREATE TABLE `BucketList`.`tbl_likes` (
 
 ##  sp_AddUpdateLikes - STORED PROCEDURE - updates likes whenever a user likes or dislikes a particular wish.
 DELIMITER $$ 
+DROP PROCEDURE IF EXISTS `sp_AddUpdateLikes`;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddUpdateLikes`(
     p_wish_id int,
     p_user_id int,
@@ -359,6 +347,7 @@ DELIMITER ;
 ##  This feature shows the total number of counts a particular wish has garnered. 
 ##  When a new wish gets added it'll make an entry into the tbl_likes table.
 DELIMITER $$
+DROP PROCEDURE IF EXISTS `sp_addWish`;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_addWish`(
     IN p_title varchar(45),
     IN p_description varchar(1000),
@@ -414,6 +403,7 @@ END$$
 DELIMITER ;
 
 ##  sp_GetAllWishes - STORED PROCEDURE - modify to include the number of likes each wish has garnered.
+DROP PROCEDURE IF EXISTS `sp_GetAllWishes`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetAllWishes`()
 BEGIN
@@ -436,17 +426,18 @@ END$$
 DELIMITER ;
 
 ##  sp_GetAllWishes - STORED PROCEDURE - Modify to include FUNCTION 'hasLiked' indicating the user like status.
+DROP PROCEDURE IF EXISTS `sp_GetAllWishes`;
 DELIMITER $$
- 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetAllWishes`(
     p_user int
 )
 BEGIN
     select wish_id,wish_title,wish_description,wish_file_path,getSum(wish_id),hasLiked(wish_id,p_user)
     from tbl_wish where wish_private = 0;
-END
+END$$
+DELIMITER ;
 
-##  sp_AddUpdateLikes - STORED PROCEDURE - modify to toggle the like/unlike in the stored procedure.
+##  sp_AddUpdateLikes - STORED PROCEDURE - modify to toggle the like/unlike in the stored PROCEDURE.
 ##  Earlier we were passing in the like status, 1 for a like and 0 for unlike.
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddUpdateLikes`(
@@ -495,10 +486,4 @@ BEGIN
     select getSum(p_wish_id),hasLiked(p_wish_id,p_user_id);
 END$$
 DELIMITER ;
-
-
-
-
-
-
 

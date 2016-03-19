@@ -4,7 +4,7 @@
 DROP DATABASE IF EXISTS BucketList;
 CREATE DATABASE BucketList;
 USE BucketList;
-CREATE TABLE `BucketList`.`tbl_user` (
+CREATE TABLE tbl_user (
   `user_id` bigint NOT NULL AUTO_INCREMENT,
   `user_name` varchar(225) NULL,
   `user_username` varchar(225) NULL,
@@ -125,6 +125,7 @@ END$$
 DELIMITER ;
 
 ##  sp_update Wish - STORED PROCEDURE - to update wishes after editing.
+DROP PROCEDURE IF EXISTS `sp_updateWish`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateWish`(
 IN p_title varchar(45),
@@ -256,6 +257,7 @@ END$$
 DELIMITER ;
 
 ##  sp_GetWishById - STORED PROCEDURE - to include the additional fields as shown: 
+DROP PROCEDURE IF EXISTS `sp_GetWishById`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_GetWishById`(
 IN p_wish_id bigint,
@@ -303,12 +305,13 @@ END$$
 DELIMITER ;
 
 ##  tbl_likes - a table which will keep track of the likes a particular wish has garnered.
-CREATE TABLE `BucketList`.`tbl_likes` (
+CREATE TABLE tbl_likes (
   `wish_id` INT NOT NULL,
   `like_id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NULL,
-  `wish_like` INT NULL DEFAULT 0 ;
-  PRIMARY KEY (`like_id`));
+  `wish_like` INT NULL DEFAULT 0,
+  PRIMARY KEY (`like_id`)
+  );
 
 ##  sp_AddUpdateLikes - STORED PROCEDURE - updates likes whenever a user likes or dislikes a particular wish.
 DELIMITER $$ 
@@ -439,6 +442,7 @@ DELIMITER ;
 
 ##  sp_AddUpdateLikes - STORED PROCEDURE - modify to toggle the like/unlike in the stored PROCEDURE.
 ##  Earlier we were passing in the like status, 1 for a like and 0 for unlike.
+DROP PROCEDURE IF EXISTS `sp_AddUpdateLikes`;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddUpdateLikes`(
     p_wish_id int,
@@ -486,4 +490,3 @@ BEGIN
     select getSum(p_wish_id),hasLiked(p_wish_id,p_user_id);
 END$$
 DELIMITER ;
-

@@ -41,8 +41,6 @@ app.config['UPLOAD_FOLDER'] = 'static/Uploads'
 app.wsgi_app = StreamConsumingMiddleware(app.wsgi_app)
 
 
-
-
 @app.route('/')
 def main():
     return render_template('index.html')

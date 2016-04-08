@@ -1,8 +1,33 @@
+C1_A - admiration
+	alive
+	happy
+	interested
+	loving
+	open
+	positive
+	
+C1_B - rage
+	angry
+	confused
+	depressed
+	judgemental
+
+C1_C - grief
+	afraid
+	helpless
+	hurt
+	indifferent
+	sad
+
+C1_D - feelings
+	peaceful
+	relaxed
+	strong
+
 create table tbl_UltCat;
 
-insert into angry
-	(synonym)
-values
+insert into angry 
+	values
 ('irritated'),
 ('enraged'),
 ('hostile'),
@@ -66,9 +91,8 @@ values
 ('reprimanding'),
 ('envious');
 
-insert into depressed
-	(synonym)
-values
+insert into depressed 
+	values
 ('disappointed'),
 ('discouraged'),
 ('ashamed'),
@@ -129,9 +153,8 @@ values
 ('slouching'),
 ('achy');
 
-insert into confused
-	(synonym)
-values
+insert into confused 
+	values
 ('doubtful'),
 ('uncertain'),
 ('indecisive'),
@@ -167,9 +190,8 @@ values
 ('awkward');
 
 
-insert into helpless
-	(synonym)
-values
+insert into helpless 
+	values
 ('incapable'),
 ('alone'),
 ('paralyzed'),
@@ -202,9 +224,8 @@ values
 ('twitching'),
 ('compulsive');
 
-insert into indifferent
-	(synonym)
-values
+insert into indifferent 
+	values
 ('insensitive'),
 ('dull'),
 ('reserved'),
@@ -221,9 +242,8 @@ values
 ('slow'),
 ('sluggish');
 
-insert into afraid
-	(synonym)
-values
+insert into afraid 
+	values
 ('fearful'),
 ('terrified'),
 ('suspicious'),
@@ -268,9 +288,8 @@ values
 ('agoraphobic'),
 ('selfconscious');
 
-insert into hurt
-	(synonym)
-values
+insert into hurt 
+	values
 ('crushed'),
 ('tormented'),
 ('deprived'),
@@ -302,9 +321,8 @@ values
 ('belittled');
 
 
-insert into sad
-	(synonym)
-values
+insert into sad 
+	values
 ('tearful'),
 ('sorrowful'),
 ('anguished'),
@@ -331,9 +349,8 @@ values
 ('groaning'),
 ('moaning');
 
-insert into judgemental
-	(synonym)
-values
+insert into judgemental 
+	values
 ('stony'),
 ('serious'),
 ('stern'),
@@ -367,9 +384,8 @@ values
 ('obsessive'),
 ('blunt');
 
-insert into open
-	(synonym)
-values
+insert into open 
+	values
 ('understanding'),
 ('confident'),
 ('easy'),
@@ -395,9 +411,8 @@ values
 ('embracing');
 
 
-insert into loving
-	(synonym)
-values
+insert into loving 
+	values
 
 ('considerate'),
 ('affectionate'),
@@ -427,9 +442,8 @@ values
 ('kindly'),
 ('grateful');
 
-insert into happy
-	(synonym)
-values
+insert into happy 
+	values
 ('blissful'),
 ('joyous'),
 ('delighted'),
@@ -460,9 +474,8 @@ values
 ('in heaven'),
 ('on top of the world');
 
-insert into interested
-	(synonym)
-values
+insert into interested 
+	values
 ('fascinated'),
 ('intrigued'),
 ('absorbed'),
@@ -480,9 +493,8 @@ values
 ('focused');
 
 
-insert into alive
-	(synonym)
-values
+insert into alive 
+	values
 ('playful'),
 ('courageous'),
 ('energetic'),
@@ -509,9 +521,8 @@ values
 ('vigorous'),
 ('tickled');
 
-insert into positive
-	(synonym)
-values
+insert into positive 
+	values
 ('eager'),
 ('keen'),
 ('earnest'),
@@ -539,9 +550,8 @@ values
 ('privileged'),
 ('adaptable');
 
-insert into peaceful
-	(synonym)
-values
+insert into peaceful 
+	values
 ('calm'),
 ('good'),
 ('at ease'),
@@ -575,9 +585,8 @@ values
 ('self-sufficient');
 
 
-insert into strong
-	(synonym)
-values
+insert into strong 
+	values
 ('reliable'),
 ('sure'),
 ('unique'),
@@ -601,9 +610,8 @@ values
 ('solid');
 
 
-insert into relaxed
-	(synonym)
-values
+insert into relaxed 
+	values
 ('glowing'),
 ('radiant'),
 ('beaming'),

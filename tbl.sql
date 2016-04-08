@@ -59,9 +59,9 @@ USE FeelsApp;
     Create Table tbl_SubCat(
         `c1_id` int references tbl_UltCat,
         `c1_name` varchar(45) references tbl_UltCat,
-        `c2_id` int NOT NULL, ##still needed?? Would conflict as Primary Key
-        `c2_name` varchar(45) NOT NULL,
-        PRIMARY KEY(`c2_name`)
+        `c2_id` int NOT NULL, ##still needed?? Would conflict as Primary Key. 
+        `c2_name` varchar(45) NOT NULL, ##Should figure out to combine with C1_id and become C1_C2_id
+        PRIMARY KEY(`c2_name`)          ##e.g. "1, admiration, 1-1, alive" 
         );
         ##Popluation
             Insert into tbl_SubCat value (1, 'admiration', 1, 'alive');
@@ -106,7 +106,7 @@ USE FeelsApp;
             ##ALTER TABLE tbl_ChTn AUTO_INCREMENT = 1;
 
     select * from tbl_UltCat;
-    select * from tbl_SubCat;    
+    select * from tbl_SubCat order by c1_id, c2_id;    
 
     /*
         desc tbl_User;

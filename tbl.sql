@@ -95,23 +95,27 @@ USE FeelsApp;
         );
 
     Create Table tbl_ChTn(
-        `Chtn_id` bigint NOT NULL, ##AUTO_INCREMENT if sourcing in list of ChTH's?
+        `Chtn_id` bigint NOT NULL, ##AUTO_INCREMENT if sourcing in list of ChTH's...
         `Chtn_name` varchar(45) NOT NULL,
         `Chtn_url` varchar(100) NOT NULL,
         `Emot_id` bigint references tbl_Emots,
         `Emot_name` varchar(45) references tbl_Emots,
         PRIMARY KEY(`Chtn_id`)
         );
+         
+           ##ALTER TABLE tbl_ChTn AUTO_INCREMENT = 1;
 
-            ##ALTER TABLE tbl_ChTn AUTO_INCREMENT = 1;
+##Desc Tables;
+    desc tbl_User;
+    desc tbl_UltCat;
+    desc tbl_SubCat;
+    desc tbl_Emots;
+    desc tbl_ChTn;  
+#Tests - Select from tables
+    select * from tbl_UltCat;
+    select * from tbl_SubCat where (`c1_id`,`c2_id`) = (1,3);
+    select * from tbl_SubCat order by c1_id, c2_id;
 
-        desc tbl_User;
-        desc tbl_UltCat;
-        desc tbl_SubCat;
-        desc tbl_Emots;
-        desc tbl_ChTn;  
-        ##Desc Tables;
-        
-        select * from tbl_UltCat;
-        select * from tbl_SubCat where (`c1_id`,`c2_id`) = (1,3);
-        select * from tbl_SubCat order by c1_id, c2_id;    
+
+
+    

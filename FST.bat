@@ -1,621 +1,554 @@
-mkdir "images";
- cd "images";
-	mkdir "admiration";
-	 cd "admiration";
-		mkdir "alive";
-		 cd "alive";
-			mkdir "playful";
-			mkdir "courageous";
-			mkdir "energetic";
-			mkdir "liberated";
-			mkdir "optimistic";
-			mkdir "frisky";
-			mkdir "animated";
-			mkdir "spirited";
-			mkdir "thrilled";
-			mkdir "wonderful";
-			mkdir "funny";
-			mkdir "great";
-			mkdir "giving";
-			mkdir "sharing";
-			mkdir "intelligent";
-			mkdir "exhilarated";
-			mkdir "equal";
-			mkdir "excited";
-			mkdir "enjoying";
-			mkdir "communicative";
-			mkdir "active";
-			mkdir "spunky";
-			mkdir "youthful";
-			mkdir "vigorous";
-			mkdir "tickled";
-		  	cd ..;
-		mkdir "happy";
-		 cd "happy";
-			mkdir "blissful";
-			mkdir "joyous";
-			mkdir "delighted";
-			mkdir "overjoyed";
-			mkdir "gleeful";
-			mkdir "thankful";
-			mkdir "festive";
-			mkdir "ecstatic";
-			mkdir "satisfied";
-			mkdir "glad";
-			mkdir "cheerful";
-			mkdir "sunny";
-			mkdir "elated";
-			mkdir "jubilant";
-			mkdir "jovial";
-			mkdir "fun-loving";
-			mkdir "lighthearted";
-			mkdir "easygoing";
-			mkdir "mellow";
-			mkdir "happy-go-lucky";
-			mkdir "glorious";
-			mkdir "innocent";
-			mkdir "child-like";
-			mkdir "gratified";
-			mkdir "euphoric";
-			mkdir "rapturous";
-			mkdir "in good humor";
-			mkdir "in heaven";
-			mkdir "on top of the world";
-		    cd ..;
-		mkdir "interested";
-		  cd "interested";
-			mkdir "fascinated";
-			mkdir "intrigued";
-			mkdir "absorbed";
-			mkdir "inquisitive";
-			mkdir "engrossed";
-			mkdir "curious";
-			mkdir "amazed";
-			mkdir "involved";
-			mkdir "attentive";
-			mkdir "observant";
-			mkdir "amused";
-			mkdir "thoughtful";
-			mkdir "courteous";
-			mkdir "intent";
-			mkdir "focused";
-			cd ..;
-		mkdir "loving";
-		  cd "loving";
-			mkdir "considerate";
-			mkdir "affectionate";
-			mkdir "sensitive";
-			mkdir "tender";
-			mkdir "devoted";
-			mkdir "attracted";
-			mkdir "passionate";
-			mkdir "admiring";
-			mkdir "warm";
-			mkdir "touched";
-			mkdir "close";
-			mkdir "loved";
-			mkdir "sweet";
-			mkdir "gentle";
-			mkdir "compassionate";
-			mkdir "caring";
-			mkdir "allowing";
-			mkdir "nonjudgmental";
-			mkdir "appreciative";
-			mkdir "respectful";
-			mkdir "humble";
-			mkdir "gracious";
-			mkdir "patient";
-			mkdir "honoring";
-			mkdir "expansive";
-			mkdir "kindly";
-			mkdir "grateful";
-			cd ..;
-		mkdir "open";
-		  cd "open";
-			mkdir "understanding";
-			mkdir "confident";
-			mkdir "easy";
-			mkdir "connected";
-			mkdir "free";
-			mkdir "sympathetic";
-			mkdir "interested";
-			mkdir "satisfied";
-			mkdir "receptive";
-			mkdir "accepting";
-			mkdir "kind";
-			mkdir "harmonious";
-			mkdir "empathetic";
-			mkdir "tolerant";
-			mkdir "friendly";
-			mkdir "approachable";
-			mkdir "outgoing";
-			mkdir "flowing";
-			mkdir "flexible";
-			mkdir "present";
-			mkdir "listening";
-			mkdir "welcoming";
-			mkdir "embracing";
-			cd ..;
-		mkdir "positive";
-		  cd "positive";
-			mkdir "eager";
-			mkdir "keen";
-			mkdir "earnest";
-			mkdir "inspired";
-			mkdir "enthusiastic";
-			mkdir "bold";
-			mkdir "brave";
-			mkdir "daring";
-			mkdir "hopeful";
-			mkdir "upbeat";
-			mkdir "beautiful";
-			mkdir "creative";
-			mkdir "constructive";
-			mkdir "helpful";
-			mkdir "resourceful";
-			mkdir "motivated";
-			mkdir "cooperative";
-			mkdir "productive";
-			mkdir "exuberant";
-			mkdir "in the zone";
-			mkdir "responsive";
-			mkdir "conscientious";
-			mkdir "approving";
-			mkdir "honored";
-			mkdir "privileged";
-			mkdir "adaptable";
-			cd ..;
-	 cd ..;
-	mkdir "rage";
-	 cd "rage";
-		mkdir "angry";
-		  cd "angry";
-			mkdir "irritated";
-			mkdir "enraged";
-			mkdir "hostile";
-			mkdir "insulting";
-			mkdir "annoyed";
-			mkdir "upset";
-			mkdir "hateful";
-			mkdir "unpleasant";
-			mkdir "offensive";
-			mkdir "aggressive";
-			mkdir "bitter";
-			mkdir "frustrated";
-			mkdir "controlling";
-			mkdir "resentful";
-			mkdir "hotheaded";
-			mkdir "malicious";
-			mkdir "infuriated";
-			mkdir "critical";
-			mkdir "meanspirited";
-			mkdir "violent";
-			mkdir "vindictive";
-			mkdir "sadistic";
-			mkdir "mean";
-			mkdir "spiteful";
-			mkdir "furious";
-			mkdir "agitated";
-			mkdir "antagonistic";
-			mkdir "repulsed";
-			mkdir "mad";
-			mkdir "cross";
-			mkdir "incensed";
-			mkdir "loud";
-			mkdir "reactive";
-			mkdir "swearing";
-			mkdir "abrupt";
-			mkdir "quarrelsome";
-			mkdir "venomous";
-			mkdir "irate";
-			mkdir "shorttempered";
-			mkdir "stubborn";
-			mkdir "rebellious";
-			mkdir "exasperated";
-			mkdir "impatient";
-			mkdir "contrary";
-			mkdir "condemning";
-			mkdir "seething";
-			mkdir "scornful";
-			mkdir "sarcastic";
-			mkdir "overbearing";
-			mkdir "sharp";
-			mkdir "poisonous";
-			mkdir "disrespectful";
-			mkdir "jealous";
-			mkdir "ticked off";
-			mkdir "hitting";
-			mkdir "yelling";
-			mkdir "screaming";
-			mkdir "revengeful";
-			mkdir "retaliating";
-			mkdir "reprimanding";
-			mkdir "envious";
-			cd ..;
-		mkdir "confused";
-		  cd "confused";
-			mkdir "doubtful";
-			mkdir "uncertain";
-			mkdir "indecisive";
-			mkdir "perplexed";
-			mkdir "embarrassed";
-			mkdir "hesitant";
-			mkdir "shy";
-			mkdir "disillusioned";
-			mkdir "distrustful";
-			mkdir "misgiving";
-			mkdir "lost";
-			mkdir "unsure";
-			mkdir "uneasy";
-			mkdir "tense";
-			mkdir "stressed";
-			mkdir "uncomfortable";
-			mkdir "comparing";
-			mkdir "dishonest";
-			mkdir "superior";
-			mkdir "disdainful";
-			mkdir "manipulative";
-			mkdir "judgmental";
-			mkdir "argumentative";
-			mkdir "authoritative";
-			mkdir "condescending";
-			mkdir "demanding";
-			mkdir "confounded";
-			mkdir "distracted";
-			mkdir "disoriented";
-			mkdir "off-kilter";
-			mkdir "frenzied";
-			mkdir "blushing";
-			mkdir "awkward";
-			cd ..;
-		mkdir "depressed";
-		  cd "depressed";
-			mkdir "disappointed";
-			mkdir "discouraged";
-			mkdir "ashamed";
-			mkdir "powerless";
-			mkdir "diminished";
-			mkdir "guilty";
-			mkdir "dissatisfied";
-			mkdir "miserable";
-			mkdir "despicable";
-			mkdir "selfdenigrating";
-			mkdir "self-hating";
-			mkdir "sulky";
-			mkdir "low";
-			mkdir "terrible";
-			mkdir "lousy";
-			mkdir "desperate";
-			mkdir "alienated";
-			mkdir "bad";
-			mkdir "pessimistic";
-			mkdir "dejected";
-			mkdir "bummed out";
-			mkdir "self-critical";
-			mkdir "selfdeprecating";
-			mkdir "gloomy";
-			mkdir "glum";
-			mkdir "disheartened";
-			mkdir "down";
-			mkdir "despondent";
-			mkdir "cheerless";
-			mkdir "rotten";
-			mkdir "masochistic";
-			mkdir "stuck";
-			mkdir "contracted";
-			mkdir "tight";
-			mkdir "blocked";
-			mkdir "despairing";
-			mkdir "hopeless";
-			mkdir "grouchy";
-			mkdir "off";
-			mkdir "moody";
-			mkdir "crabby";
-			mkdir "faultfinding";
-			mkdir "resistant";
-			mkdir "punishing";
-			mkdir "morose";
-			mkdir "cranky";
-			mkdir "grumpy";
-			mkdir "burdened";
-			mkdir "negative";
-			mkdir "closed";
-			mkdir "out of sorts";
-			mkdir "no energy";
-			mkdir "in hell";
-			mkdir "touchy";
-			mkdir "haggard";
-			mkdir "drawn";
-			mkdir "slumped";
-			mkdir "slouching";
-			mkdir "achy";
-			cd ..;
-		mkdir "judgemental";
-		  cd "judgemental";
-			mkdir "stony";
-			mkdir "serious";
-			mkdir "stern";
-			mkdir "frowning";
-			mkdir "recoiling";
-			mkdir "glaring";
-			mkdir "disgusted";
-			mkdir "unfair";
-			mkdir "attacked";
-			mkdir "tactless";
-			mkdir "hurtful";
-			mkdir "bossy";
-			mkdir "stilted";
-			mkdir "stiff";
-			mkdir "brutal";
-			mkdir "combative";
-			mkdir "pushy";
-			mkdir "neglectful";
-			mkdir "stonewalling";
-			mkdir "rude";
-			mkdir "ranting";
-			mkdir "scolding";
-			mkdir "shrill";
-			mkdir "hard";
-			mkdir "fake";
-			mkdir "phony";
-			mkdir "shallow";
-			mkdir "taut";
-			mkdir "territorial";
-			mkdir "complaining";
-			mkdir "obsessive";
-			mkdir "blunt";
-			cd ..;
-	 cd ..;
-	mkdir "grief";
-	 cd "grief";
-	 	mkdir "afraid";
-		  cd "afraid";
-			mkdir "fearful";
-			mkdir "terrified";
-			mkdir "suspicious";
-			mkdir "anxious";
-			mkdir "alarmed";
-			mkdir "panicked";
-			mkdir "nervous";
-			mkdir "scared";
-			mkdir "worried";
-			mkdir "frightened";
-			mkdir "timid";
-			mkdir "shaky";
-			mkdir "restless";
-			mkdir "threatened";
-			mkdir "cowardly";
-			mkdir "insecure";
-			mkdir "wary";
-			mkdir "menaced";
-			mkdir "uptight";
-			mkdir "apprehensive";
-			mkdir "attacking";
-			mkdir "defensive";
-			mkdir "dreadful";
-			mkdir "guarded";
-			mkdir "troubled";
-			mkdir "selfabsorbed";
-			mkdir "rigid";
-			mkdir "phobic";
-			mkdir "intolerant";
-			mkdir "disturbed";
-			mkdir "disrupted";
-			mkdir "intimidated";
-			mkdir "avoiding";
-			mkdir "unwelcoming";
-			mkdir "petrified";
-			mkdir "unbending";
-			mkdir "paranoid";
-			mkdir "inhibited";
-			mkdir "immobile";
-			mkdir "attached";
-			mkdir "prejudiced";
-			mkdir "agoraphobic";
-			mkdir "selfconscious";
-			cd ..;
-		mkdir "helpless";
-		  cd "helpless";
-			mkdir "incapable";
-			mkdir "alone";
-			mkdir "paralyzed";
-			mkdir "fatigued";
-			mkdir "useless";
-			mkdir "inferior";
-			mkdir "vulnerable";
-			mkdir "empty";
-			mkdir "distressed";
-			mkdir "pathetic";
-			mkdir "distraught";
-			mkdir "doomed";
-			mkdir "overwhelmed";
-			mkdir "incompetent";
-			mkdir "inept";
-			mkdir "incapacitated";
-			mkdir "shut down";
-			mkdir "cut off";
-			mkdir "trapped";
-			mkdir "weak";
-			mkdir "sick";
-			mkdir "nauseated";
-			mkdir "fidgety";
-			mkdir "trembling";
-			mkdir "craving";
-			mkdir "hungry";
-			mkdir "squirming";
-			mkdir "jittery";
-			mkdir "woozy";
-			mkdir "twitching";
-			mkdir "compulsive";
-			cd ..;
-		mkdir "hurt";
-		  cd "hurt";
-			mkdir "crushed";
-			mkdir "tormented";
-			mkdir "deprived";
-			mkdir "pained";
-			mkdir "tortured";
-			mkdir "rejected";
-			mkdir "injured";
-			mkdir "offended";
-			mkdir "afflicted";
-			mkdir "aching";
-			mkdir "victimized";
-			mkdir "heartbroken";
-			mkdir "agonized";
-			mkdir "appalled";
-			mkdir "wronged";
-			mkdir "humiliated";
-			mkdir "insulted";
-			mkdir "withdrawn";
-			mkdir "miffed";
-			mkdir "indignant";
-			mkdir "suffering";
-			mkdir "distant";
-			mkdir "invaded";
-			mkdir "bulldozed";
-			mkdir "bullied";
-			mkdir "secretive";
-			mkdir "slighted";
-			mkdir "smothered";
-			mkdir "belittled";
-			cd ..;
-		mkdir "indifferent";
-		  cd "indifferent";
-			mkdir "insensitive";
-			mkdir "dull";
-			mkdir "reserved";
-			mkdir "weary";
-			mkdir "bored";
-			mkdir "preoccupied";
-			mkdir "cold";
-			mkdir "lifeless";
-			mkdir "uncaring";
-			mkdir "uninterested";
-			mkdir "unresponsive";
-			mkdir "tired";
-			mkdir "robotic";
-			mkdir "slow";
-			mkdir "sluggish";
-			cd ..;
-		mkdir "sad";
-		  cd "sad";
-			mkdir "tearful";
-			mkdir "sorrowful";
-			mkdir "anguished";
-			mkdir "desolate";
-			mkdir "unhappy";
-			mkdir "lonely";
-			mkdir "grieved";
-			mkdir "mournful";
-			mkdir "dismayed";
-			mkdir "downhearted";
-			mkdir "oversensitive";
-			mkdir "dirty";
-			mkdir "remorseful";
-			mkdir "sullen";
-			mkdir "sour";
-			mkdir "selfcastigating";
-			mkdir "unworthy";
-			mkdir "fragile";
-			mkdir "disconnected";
-			mkdir "devastated";
-			mkdir "blindsided";
-			mkdir "discontented";
-			mkdir "crying";
-			mkdir "groaning";
-			mkdir "moaning";
-			cd ..;
-	 cd ..;
-	mkdir "feelings";
-	 cd "feelings";
-		mkdir "peaceful";
-		  cd "peaceful";
-			mkdir "calm";
-			mkdir "good";
-			mkdir "at ease";
-			mkdir "comfortable";
-			mkdir "pleased";
-			mkdir "encouraged";
-			mkdir "surprised";
-			mkdir "content";
-			mkdir "quiet";
-			mkdir "certain";
-			mkdir "relaxed";
-			mkdir "serene";
-			mkdir "bright";
-			mkdir "blessed";
-			mkdir "assured";
-			mkdir "clear";
-			mkdir "balanced";
-			mkdir "fine";
-			mkdir "okay";
-			mkdir "grateful";
-			mkdir "carefree";
-			mkdir "adequate";
-			mkdir "fulfilled";
-			mkdir "genuine";
-			mkdir "authentic";
-			mkdir "forgiving";
-			mkdir "sincere";
-			mkdir "uplifted";
-			mkdir "unburdened";
-			mkdir "confident";
-			mkdir "self-sufficient";
-			cd ..;
-		mkdir "relaxed";
-		  cd "relaxed";
-			mkdir "glowing";
-			mkdir "radiant";
-			mkdir "beaming";
-			mkdir "reflective";
-			mkdir "smiling";
-			mkdir "grounded";
-			mkdir "unhurried";
-			mkdir "open-minded";
-			mkdir "efficient";
-			mkdir "non-controlling";
-			mkdir "unassuming";
-			mkdir "trusting";
-			mkdir "supported";
-			mkdir "fluid";
-			mkdir "light";
-			mkdir "spontaneous";
-			mkdir "aware";
-			mkdir "healthy";
-			mkdir "meditative";
-			mkdir "still";
-			mkdir "rested";
-			mkdir "waiting";
-			mkdir "laughing";
-			mkdir "graceful";
-			mkdir "natural";
-			mkdir "steady";
-			mkdir "centered";
-			mkdir "placid";
-			cd ..;
-		mkdir "strong";
-		  cd "strong";
-			mkdir "reliable";
-			mkdir "sure";
-			mkdir "unique";
-			mkdir "dynamic";
-			mkdir "tenacious";
-			mkdir "hardy";
-			mkdir "secure";
-			mkdir "stable";
-			mkdir "honest";
-			mkdir "composed";
-			mkdir "self-affirming";
-			mkdir "truthful";
-			mkdir "supportive";
-			mkdir "excellent";
-			mkdir "perseverant";
-			mkdir "responsible";
-			mkdir "energized";
-			mkdir "sane";
-			mkdir "complete";
-			mkdir "mature";
-			mkdir "solid";
-			cd ..;
-	 cd ..;
+mkdir
+"images\admiration\alive\playful"
+"images\admiration\alive\courageous"
+"images\admiration\alive\energetic"
+"images\admiration\alive\liberated"
+"images\admiration\alive\optimistic"
+"images\admiration\alive\frisky"
+"images\admiration\alive\animated"
+"images\admiration\alive\spirited"
+"images\admiration\alive\thrilled"
+"images\admiration\alive\wonderful"
+"images\admiration\alive\funny"
+"images\admiration\alive\great"
+"images\admiration\alive\giving"
+"images\admiration\alive\sharing"
+"images\admiration\alive\intelligent"
+"images\admiration\alive\exhilarated"
+"images\admiration\alive\equal"
+"images\admiration\alive\excited"
+"images\admiration\alive\enjoying"
+"images\admiration\alive\communicative"
+"images\admiration\alive\active"
+"images\admiration\alive\spunky"
+"images\admiration\alive\youthful"
+"images\admiration\alive\vigorous"
+"images\admiration\alive\tickled"
+"images\admiration\happy\blissful"
+"images\admiration\happy\joyous"
+"images\admiration\happy\delighted"
+"images\admiration\happy\overjoyed"
+"images\admiration\happy\gleeful"
+"images\admiration\happy\thankful"
+"images\admiration\happy\festive"
+"images\admiration\happy\ecstatic"
+"images\admiration\happy\satisfied"
+"images\admiration\happy\glad"
+"images\admiration\happy\cheerful"
+"images\admiration\happy\sunny"
+"images\admiration\happy\elated"
+"images\admiration\happy\jubilant"
+"images\admiration\happy\jovial"
+"images\admiration\happy\fun-loving"
+"images\admiration\happy\lighthearted"
+"images\admiration\happy\easygoing"
+"images\admiration\happy\mellow"
+"images\admiration\happy\happy-go-lucky"
+"images\admiration\happy\glorious"
+"images\admiration\happy\innocent"
+"images\admiration\happy\child-like"
+"images\admiration\happy\gratified"
+"images\admiration\happy\euphoric"
+"images\admiration\happy\rapturous"
+"images\admiration\happy\in good humor"
+"images\admiration\happy\in heaven"
+"images\admiration\happy\on top of the world"
+"images\admiration\interested\fascinated"
+"images\admiration\interested\intrigued"
+"images\admiration\interested\absorbed"
+"images\admiration\interested\inquisitive"
+"images\admiration\interested\engrossed"
+"images\admiration\interested\curious"
+"images\admiration\interested\amazed"
+"images\admiration\interested\involved"
+"images\admiration\interested\attentive"
+"images\admiration\interested\observant"
+"images\admiration\interested\amused"
+"images\admiration\interested\thoughtful"
+"images\admiration\interested\courteous"
+"images\admiration\interested\intent"
+"images\admiration\interested\focused"
+"images\admiration\loving\considerate"
+"images\admiration\loving\affectionate"
+"images\admiration\loving\sensitive"
+"images\admiration\loving\tender"
+"images\admiration\loving\devoted"
+"images\admiration\loving\attracted"
+"images\admiration\loving\passionate"
+"images\admiration\loving\admiring"
+"images\admiration\loving\warm"
+"images\admiration\loving\touched"
+"images\admiration\loving\close"
+"images\admiration\loving\loved"
+"images\admiration\loving\sweet"
+"images\admiration\loving\gentle"
+"images\admiration\loving\compassionate"
+"images\admiration\loving\caring"
+"images\admiration\loving\allowing"
+"images\admiration\loving\nonjudgmental"
+"images\admiration\loving\appreciative"
+"images\admiration\loving\respectful"
+"images\admiration\loving\humble"
+"images\admiration\loving\gracious"
+"images\admiration\loving\patient"
+"images\admiration\loving\honoring"
+"images\admiration\loving\expansive"
+"images\admiration\loving\kindly"
+"images\admiration\loving\grateful"
+"images\admiration\open\understanding"
+"images\admiration\open\confident"
+"images\admiration\open\easy"
+"images\admiration\open\connected"
+"images\admiration\open\free"
+"images\admiration\open\sympathetic"
+"images\admiration\open\interested"
+"images\admiration\open\satisfied"
+"images\admiration\open\receptive"
+"images\admiration\open\accepting"
+"images\admiration\open\kind"
+"images\admiration\open\harmonious"
+"images\admiration\open\empathetic"
+"images\admiration\open\tolerant"
+"images\admiration\open\friendly"
+"images\admiration\open\approachable"
+"images\admiration\open\outgoing"
+"images\admiration\open\flowing"
+"images\admiration\open\flexible"
+"images\admiration\open\present"
+"images\admiration\open\listening"
+"images\admiration\open\welcoming"
+"images\admiration\open\embracing"
+"images\admiration\positive\eager"
+"images\admiration\positive\keen"
+"images\admiration\positive\earnest"
+"images\admiration\positive\inspired"
+"images\admiration\positive\enthusiastic"
+"images\admiration\positive\bold"
+"images\admiration\positive\brave"
+"images\admiration\positive\daring"
+"images\admiration\positive\hopeful"
+"images\admiration\positive\upbeat"
+"images\admiration\positive\beautiful"
+"images\admiration\positive\creative"
+"images\admiration\positive\constructive"
+"images\admiration\positive\helpful"
+"images\admiration\positive\resourceful"
+"images\admiration\positive\motivated"
+"images\admiration\positive\cooperative"
+"images\admiration\positive\productive"
+"images\admiration\positive\exuberant"
+"images\admiration\positive\in the zone"
+"images\admiration\positive\responsive"
+"images\admiration\positive\conscientious"
+"images\admiration\positive\approving"
+"images\admiration\positive\honored"
+"images\admiration\positive\privileged"
+"images\admiration\positive\adaptable"
+"images\rage\angry\irritated"
+"images\rage\angry\enraged"
+"images\rage\angry\hostile"
+"images\rage\angry\insulting"
+"images\rage\angry\annoyed"
+"images\rage\angry\upset"
+"images\rage\angry\hateful"
+"images\rage\angry\unpleasant"
+"images\rage\angry\offensive"
+"images\rage\angry\aggressive"
+"images\rage\angry\bitter"
+"images\rage\angry\frustrated"
+"images\rage\angry\controlling"
+"images\rage\angry\resentful"
+"images\rage\angry\hotheaded"
+"images\rage\angry\malicious"
+"images\rage\angry\infuriated"
+"images\rage\angry\critical"
+"images\rage\angry\meanspirited"
+"images\rage\angry\violent"
+"images\rage\angry\vindictive"
+"images\rage\angry\sadistic"
+"images\rage\angry\mean"
+"images\rage\angry\spiteful"
+"images\rage\angry\furious"
+"images\rage\angry\agitated"
+"images\rage\angry\antagonistic"
+"images\rage\angry\repulsed"
+"images\rage\angry\mad"
+"images\rage\angry\cross"
+"images\rage\angry\incensed"
+"images\rage\angry\loud"
+"images\rage\angry\reactive"
+"images\rage\angry\swearing"
+"images\rage\angry\abrupt"
+"images\rage\angry\quarrelsome"
+"images\rage\angry\venomous"
+"images\rage\angry\irate"
+"images\rage\angry\shorttempered"
+"images\rage\angry\stubborn"
+"images\rage\angry\rebellious"
+"images\rage\angry\exasperated"
+"images\rage\angry\impatient"
+"images\rage\angry\contrary"
+"images\rage\angry\condemning"
+"images\rage\angry\seething"
+"images\rage\angry\scornful"
+"images\rage\angry\sarcastic"
+"images\rage\angry\overbearing"
+"images\rage\angry\sharp"
+"images\rage\angry\poisonous"
+"images\rage\angry\disrespectful"
+"images\rage\angry\jealous"
+"images\rage\angry\ticked off"
+"images\rage\angry\hitting"
+"images\rage\angry\yelling"
+"images\rage\angry\screaming"
+"images\rage\angry\revengeful"
+"images\rage\angry\retaliating"
+"images\rage\angry\reprimanding"
+"images\rage\angry\envious"
+"images\rage\confused\doubtful"
+"images\rage\confused\uncertain"
+"images\rage\confused\indecisive"
+"images\rage\confused\perplexed"
+"images\rage\confused\embarrassed"
+"images\rage\confused\hesitant"
+"images\rage\confused\shy"
+"images\rage\confused\disillusioned"
+"images\rage\confused\distrustful"
+"images\rage\confused\misgiving"
+"images\rage\confused\lost"
+"images\rage\confused\unsure"
+"images\rage\confused\uneasy"
+"images\rage\confused\tense"
+"images\rage\confused\stressed"
+"images\rage\confused\uncomfortable"
+"images\rage\confused\comparing"
+"images\rage\confused\dishonest"
+"images\rage\confused\superior"
+"images\rage\confused\disdainful"
+"images\rage\confused\manipulative"
+"images\rage\confused\judgmental"
+"images\rage\confused\argumentative"
+"images\rage\confused\authoritative"
+"images\rage\confused\condescending"
+"images\rage\confused\demanding"
+"images\rage\confused\confounded"
+"images\rage\confused\distracted"
+"images\rage\confused\disoriented"
+"images\rage\confused\off-kilter"
+"images\rage\confused\frenzied"
+"images\rage\confused\blushing"
+"images\rage\confused\awkward"
+"images\rage\depressed\disappointed"
+"images\rage\depressed\discouraged"
+"images\rage\depressed\ashamed"
+"images\rage\depressed\powerless"
+"images\rage\depressed\diminished"
+"images\rage\depressed\guilty"
+"images\rage\depressed\dissatisfied"
+"images\rage\depressed\miserable"
+"images\rage\depressed\despicable"
+"images\rage\depressed\selfdenigrating"
+"images\rage\depressed\hating"
+"images\rage\depressed\sulky"
+"images\rage\depressed\low"
+"images\rage\depressed\terrible"
+"images\rage\depressed\lousy"
+"images\rage\depressed\desperate"
+"images\rage\depressed\alienated"
+"images\rage\depressed\bad"
+"images\rage\depressed\pessimistic"
+"images\rage\depressed\dejected"
+"images\rage\depressed\out"
+"images\rage\depressed\critical"
+"images\rage\depressed\selfdeprecating"
+"images\rage\depressed\gloomy"
+"images\rage\depressed\glum"
+"images\rage\depressed\disheartened"
+"images\rage\depressed\down"
+"images\rage\depressed\despondent"
+"images\rage\depressed\cheerless"
+"images\rage\depressed\rotten"
+"images\rage\depressed\masochistic"
+"images\rage\depressed\stuck"
+"images\rage\depressed\contracted"
+"images\rage\depressed\tight"
+"images\rage\depressed\blocked"
+"images\rage\depressed\despairing"
+"images\rage\depressed\hopeless"
+"images\rage\depressed\grouchy"
+"images\rage\depressed\off"
+"images\rage\depressed\moody"
+"images\rage\depressed\crabby"
+"images\rage\depressed\faultfinding"
+"images\rage\depressed\resistant"
+"images\rage\depressed\punishing"
+"images\rage\depressed\morose"
+"images\rage\depressed\cranky"
+"images\rage\depressed\grumpy"
+"images\rage\depressed\burdened"
+"images\rage\depressed\negative"
+"images\rage\depressed\closed"
+"images\rage\depressed\sorts"
+"images\rage\depressed\energy"
+"images\rage\depressed\hell"
+"images\rage\depressed\touchy"
+"images\rage\depressed\haggard"
+"images\rage\depressed\drawn"
+"images\rage\depressed\slumped"
+"images\rage\depressed\slouching"
+"images\rage\depressed\achy"
+"images\rage\judgemental\stony"
+"images\rage\judgemental\serious"
+"images\rage\judgemental\stern"
+"images\rage\judgemental\frowning"
+"images\rage\judgemental\recoiling"
+"images\rage\judgemental\glaring"
+"images\rage\judgemental\disgusted"
+"images\rage\judgemental\unfair"
+"images\rage\judgemental\attacked"
+"images\rage\judgemental\tactless"
+"images\rage\judgemental\hurtful"
+"images\rage\judgemental\bossy"
+"images\rage\judgemental\stilted"
+"images\rage\judgemental\stiff"
+"images\rage\judgemental\brutal"
+"images\rage\judgemental\combative"
+"images\rage\judgemental\pushy"
+"images\rage\judgemental\neglectful"
+"images\rage\judgemental\stonewalling"
+"images\rage\judgemental\rude"
+"images\rage\judgemental\ranting"
+"images\rage\judgemental\scolding"
+"images\rage\judgemental\shrill"
+"images\rage\judgemental\hard"
+"images\rage\judgemental\fake"
+"images\rage\judgemental\phony"
+"images\rage\judgemental\shallow"
+"images\rage\judgemental\taut"
+"images\rage\judgemental\territorial"
+"images\rage\judgemental\complaining"
+"images\rage\judgemental\obsessive"
+"images\rage\judgemental\blunt"
+"images\grief\afraid\fearful"
+"images\grief\afraid\terrified"
+"images\grief\afraid\suspicious"
+"images\grief\afraid\anxious"
+"images\grief\afraid\alarmed"
+"images\grief\afraid\panicked"
+"images\grief\afraid\nervous"
+"images\grief\afraid\scared"
+"images\grief\afraid\worried"
+"images\grief\afraid\frightened"
+"images\grief\afraid\timid"
+"images\grief\afraid\shaky"
+"images\grief\afraid\restless"
+"images\grief\afraid\threatened"
+"images\grief\afraid\cowardly"
+"images\grief\afraid\insecure"
+"images\grief\afraid\wary"
+"images\grief\afraid\menaced"
+"images\grief\afraid\uptight"
+"images\grief\afraid\apprehensive"
+"images\grief\afraid\attacking"
+"images\grief\afraid\defensive"
+"images\grief\afraid\dreadful"
+"images\grief\afraid\guarded"
+"images\grief\afraid\troubled"
+"images\grief\afraid\selfabsorbed"
+"images\grief\afraid\rigid"
+"images\grief\afraid\phobic"
+"images\grief\afraid\intolerant"
+"images\grief\afraid\disturbed"
+"images\grief\afraid\disrupted"
+"images\grief\afraid\intimidated"
+"images\grief\afraid\avoiding"
+"images\grief\afraid\unwelcoming"
+"images\grief\afraid\petrified"
+"images\grief\afraid\unbending"
+"images\grief\afraid\paranoid"
+"images\grief\afraid\inhibited"
+"images\grief\afraid\immobile"
+"images\grief\afraid\attached"
+"images\grief\afraid\prejudiced"
+"images\grief\afraid\agoraphobic"
+"images\grief\afraid\selfconscious"
+"images\grief\helpless\incapable"
+"images\grief\helpless\alone"
+"images\grief\helpless\paralyzed"
+"images\grief\helpless\fatigued"
+"images\grief\helpless\useless"
+"images\grief\helpless\inferior"
+"images\grief\helpless\vulnerable"
+"images\grief\helpless\empty"
+"images\grief\helpless\distressed"
+"images\grief\helpless\pathetic"
+"images\grief\helpless\distraught"
+"images\grief\helpless\doomed"
+"images\grief\helpless\overwhelmed"
+"images\grief\helpless\incompetent"
+"images\grief\helpless\inept"
+"images\grief\helpless\incapacitated"
+"images\grief\helpless\shut down"
+"images\grief\helpless\cut off"
+"images\grief\helpless\trapped"
+"images\grief\helpless\weak"
+"images\grief\helpless\sick"
+"images\grief\helpless\nauseated"
+"images\grief\helpless\fidgety"
+"images\grief\helpless\trembling"
+"images\grief\helpless\craving"
+"images\grief\helpless\hungry"
+"images\grief\helpless\squirming"
+"images\grief\helpless\jittery"
+"images\grief\helpless\woozy"
+"images\grief\helpless\twitching"
+"images\grief\helpless\compulsive"
+"images\grief\hurt\crushed"
+"images\grief\hurt\tormented"
+"images\grief\hurt\deprived"
+"images\grief\hurt\pained"
+"images\grief\hurt\tortured"
+"images\grief\hurt\rejected"
+"images\grief\hurt\injured"
+"images\grief\hurt\offended"
+"images\grief\hurt\afflicted"
+"images\grief\hurt\aching"
+"images\grief\hurt\victimized"
+"images\grief\hurt\heartbroken"
+"images\grief\hurt\agonized"
+"images\grief\hurt\appalled"
+"images\grief\hurt\wronged"
+"images\grief\hurt\humiliated"
+"images\grief\hurt\insulted"
+"images\grief\hurt\withdrawn"
+"images\grief\hurt\miffed"
+"images\grief\hurt\indignant"
+"images\grief\hurt\suffering"
+"images\grief\hurt\distant"
+"images\grief\hurt\invaded"
+"images\grief\hurt\bulldozed"
+"images\grief\hurt\bullied"
+"images\grief\hurt\secretive"
+"images\grief\hurt\slighted"
+"images\grief\hurt\smothered"
+"images\grief\hurt\belittled"
+"images\grief\indifferent\insensitive"
+"images\grief\indifferent\dull"
+"images\grief\indifferent\reserved"
+"images\grief\indifferent\weary"
+"images\grief\indifferent\bored"
+"images\grief\indifferent\preoccupied"
+"images\grief\indifferent\cold"
+"images\grief\indifferent\lifeless"
+"images\grief\indifferent\uncaring"
+"images\grief\indifferent\uninterested"
+"images\grief\indifferent\unresponsive"
+"images\grief\indifferent\tired"
+"images\grief\indifferent\robotic"
+"images\grief\indifferent\slow"
+"images\grief\indifferent\sluggish"
+"images\grief\sad\tearful"
+"images\grief\sad\sorrowful"
+"images\grief\sad\anguished"
+"images\grief\sad\desolate"
+"images\grief\sad\unhappy"
+"images\grief\sad\lonely"
+"images\grief\sad\grieved"
+"images\grief\sad\mournful"
+"images\grief\sad\dismayed"
+"images\grief\sad\downhearted"
+"images\grief\sad\oversensitive"
+"images\grief\sad\dirty"
+"images\grief\sad\remorseful"
+"images\grief\sad\sullen"
+"images\grief\sad\sour"
+"images\grief\sad\selfcastigating"
+"images\grief\sad\unworthy"
+"images\grief\sad\fragile"
+"images\grief\sad\disconnected"
+"images\grief\sad\devastated"
+"images\grief\sad\blindsided"
+"images\grief\sad\discontented"
+"images\grief\sad\crying"
+"images\grief\sad\groaning"
+"images\grief\sad\moaning"
+"images\feelings\peaceful\calm"
+"images\feelings\peaceful\good"
+"images\feelings\peaceful\at ease"
+"images\feelings\peaceful\comfortable"
+"images\feelings\peaceful\pleased"
+"images\feelings\peaceful\encouraged"
+"images\feelings\peaceful\surprised"
+"images\feelings\peaceful\content"
+"images\feelings\peaceful\quiet"
+"images\feelings\peaceful\certain"
+"images\feelings\peaceful\relaxed"
+"images\feelings\peaceful\serene"
+"images\feelings\peaceful\bright"
+"images\feelings\peaceful\blessed"
+"images\feelings\peaceful\assured"
+"images\feelings\peaceful\clear"
+"images\feelings\peaceful\balanced"
+"images\feelings\peaceful\fine"
+"images\feelings\peaceful\okay"
+"images\feelings\peaceful\grateful"
+"images\feelings\peaceful\carefree"
+"images\feelings\peaceful\adequate"
+"images\feelings\peaceful\fulfilled"
+"images\feelings\peaceful\genuine"
+"images\feelings\peaceful\authentic"
+"images\feelings\peaceful\forgiving"
+"images\feelings\peaceful\sincere"
+"images\feelings\peaceful\uplifted"
+"images\feelings\peaceful\unburdened"
+"images\feelings\peaceful\confident"
+"images\feelings\peaceful\self-sufficient"
+"images\feelings\relaxed\glowing"
+"images\feelings\relaxed\radiant"
+"images\feelings\relaxed\beaming"
+"images\feelings\relaxed\reflective"
+"images\feelings\relaxed\smiling"
+"images\feelings\relaxed\grounded"
+"images\feelings\relaxed\unhurried"
+"images\feelings\relaxed\open-minded"
+"images\feelings\relaxed\efficient"
+"images\feelings\relaxed\non-controlling"
+"images\feelings\relaxed\unassuming"
+"images\feelings\relaxed\trusting"
+"images\feelings\relaxed\supported"
+"images\feelings\relaxed\fluid"
+"images\feelings\relaxed\light"
+"images\feelings\relaxed\spontaneous"
+"images\feelings\relaxed\aware"
+"images\feelings\relaxed\healthy"
+"images\feelings\relaxed\meditative"
+"images\feelings\relaxed\still"
+"images\feelings\relaxed\rested"
+"images\feelings\relaxed\waiting"
+"images\feelings\relaxed\laughing"
+"images\feelings\relaxed\graceful"
+"images\feelings\relaxed\natural"
+"images\feelings\relaxed\steady"
+"images\feelings\relaxed\centered"
+"images\feelings\relaxed\placid"
+"images\feelings\strong\reliable"
+"images\feelings\strong\sure"
+"images\feelings\strong\unique"
+"images\feelings\strong\dynamic"
+"images\feelings\strong\tenacious"
+"images\feelings\strong\hardy"
+"images\feelings\strong\secure"
+"images\feelings\strong\stable"
+"images\feelings\strong\honest"
+"images\feelings\strong\composed"
+"images\feelings\strong\self-affirming"
+"images\feelings\strong\truthful"
+"images\feelings\strong\supportive"
+"images\feelings\strong\excellent"
+"images\feelings\strong\perseverant"
+"images\feelings\strong\responsible"
+"images\feelings\strong\energized"
+"images\feelings\strong\sane"
+"images\feelings\strong\complete"
+"images\feelings\strong\mature"
+"images\feelings\strong\solid"

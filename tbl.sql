@@ -105,14 +105,13 @@ USE FeelsApp;
 
             ##ALTER TABLE tbl_ChTn AUTO_INCREMENT = 1;
 
-    select * from tbl_UltCat;
-    select * from tbl_SubCat where (`c1_id`,`c2_id`) = (1,3);
-    select * from tbl_SubCat order by c1_id, c2_id;    
-
-    /*
         desc tbl_User;
         desc tbl_UltCat;
         desc tbl_SubCat;
         desc tbl_Emots;
-        desc tbl_ChTn;  */
-    ##Desc Tables;
+        desc tbl_ChTn;  
+        ##Desc Tables;
+        
+        select * from tbl_UltCat;
+        select * from tbl_SubCat where (`c1_id`,`c2_id`) = (1,3);
+        select * from tbl_SubCat order by c1_id, c2_id;    

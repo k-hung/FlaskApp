@@ -70,21 +70,26 @@ USE FeelsApp;
             Insert into tbl_SubCat value (1, 'admiration', 4, 'loving');
             Insert into tbl_SubCat value (1, 'admiration', 5, 'open');
             Insert into tbl_SubCat value (1, 'admiration', 6, 'positive');
-            
+            Insert into tbl_SubCat value (1, 'admiration', 7, 'testing');
+
             Insert into tbl_SubCat value (2, 'rage', 1, 'angry');
             Insert into tbl_SubCat value (2, 'rage', 2, 'confused');
             Insert into tbl_SubCat value (2, 'rage', 3, 'depressed');
             Insert into tbl_SubCat value (2, 'rage', 4, 'judgemental');
+            Insert into tbl_SubCat value (2, 'rage', 5, 'testing');
 
             Insert into tbl_SubCat value (3, 'grief', 1, 'afraid');
             Insert into tbl_SubCat value (3, 'grief', 2, 'helpless');
             Insert into tbl_SubCat value (3, 'grief', 3, 'hurt');
             Insert into tbl_SubCat value (3, 'grief', 4, 'indifferent');
             Insert into tbl_SubCat value (3, 'grief', 5, 'sad');
-            
+            Insert into tbl_SubCat value (3, 'grief', 6, 'testing');
+
             Insert into tbl_SubCat value (4, 'feelings', 1, 'peaceful');
             Insert into tbl_SubCat value (4, 'feelings', 2, 'relaxed');
             Insert into tbl_SubCat value (4, 'feelings', 3, 'strong');
+            Insert into tbl_SubCat value (4, 'feelings', 4, 'testing');
+            ##added testing, set for localhost testings.
 
     Create Table tbl_Emots(        
         `Emot_id` int NOT NULL,

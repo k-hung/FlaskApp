@@ -12,7 +12,7 @@ app.secret_key = 'why would I tell you my secret key?'
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'BucketList'
+app.config['MYSQL_DATABASE_DB'] = 'FeelsApp'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
@@ -395,4 +395,5 @@ def signUp():
         conn.close()
 
 if __name__ == "__main__":
+    app.debug = 'TRUE'
     app.run(port=5000)

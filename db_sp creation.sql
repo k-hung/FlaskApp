@@ -1,5 +1,4 @@
 
-##Part 1 Begins Below:
 ##  tbl_user - Database Implementation for users.
 DROP DATABASE IF EXISTS BucketList;
 CREATE DATABASE BucketList;
@@ -43,10 +42,6 @@ BEGIN
     END IF;
 END$$
 DELIMITER ;
-
-##Part 1 Ends.
-
-##Part 2 Begins Below:
 ##  sp_validateLogin - STORED PROCEDURE - to get user details based on username.
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_validateLogin`(
@@ -56,10 +51,6 @@ BEGIN
     select * from tbl_user where user_username = p_username;
 END$$
 DELIMITER ;
-
-##Part 2 Ends.
-
-##Part 3 Begins Below:
 ##  tbl_wish - Database Implementation for wishes.
 CREATE TABLE `tbl_wish` (
   `wish_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -107,10 +98,6 @@ BEGIN
     select * from tbl_wish where wish_user_id = p_user_id;
 END$$
 DELIMITER ;
-
-##Part 3 Ends.
-
-##Part 4 Begins Below:
 ##  sp_GetWishByID - STORED PROCEDURE - to fetch data from the database.
 ##                 - to get particular wish details using the wish ID and user ID.
 DROP PROCEDURE IF EXISTS `sp_GetWishById`;
@@ -151,10 +138,6 @@ BEGIN
 delete from tbl_wish where wish_id = p_wish_id and wish_user_id = p_user_id;
 END$$
 DELIMITER ;
-
-##Part 4 Ends
-
-##Part 5 Begins Below:
 ##  sp_GetWishByUser - STORED PROCEDURE - to get wish by user
 DROP PROCEDURE IF EXISTS `sp_GetWishByUser`;
 DELIMITER $$
@@ -189,10 +172,6 @@ BEGIN
     DEALLOCATE PREPARE stmt;
 END$$
 DELIMITER ;
-
-##Part 5 Ends
-
-##Part 6 Begins Below:
 ## tbl_wish - implementation of 3 new columns.
 ALTER TABLE `BucketList`.`tbl_wish` 
 ADD COLUMN `wish_file_path` VARCHAR(200) NULL AFTER `wish_date`,
@@ -290,10 +269,6 @@ update tbl_wish set
     where wish_id = p_wish_id and wish_user_id = p_user_id;
 END$$
 DELIMITER ;
-
-##Part 6 Ends.
-
-##Part 7 Begins Below:
 ##  sp_GetAllWishes - STORED PROCEDURE - to fetch the data from the database to populate the dashboard.
 USE `BucketList`;
 DROP PROCEDURE IF EXISTS `sp_GetAllWishes`;
@@ -342,10 +317,6 @@ BEGIN
     end if;
 END$$
 DELIMITER ;
-
-##Part 7 Ends.
-
-##Part 8 Begins Below:
 ##  sp_addWish - STORED PROCEDURE - to add an entry into the tbl_likes table.
 ##  This feature shows the total number of counts a particular wish has garnered. 
 ##  When a new wish gets added it'll make an entry into the tbl_likes table.

@@ -69,25 +69,25 @@ def addUpdateLike():
             _wishId = request.form['wish']
             _like = request.form['like']
             _user = session.get('user')
-           
+
 
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.callproc('sp_AddUpdateLikes',(_wishId,_user,_like))
             data = cursor.fetchall()
-            
+
 
             if len(data) is 0:
                 conn.commit()
                 cursor.close()
                 conn.close()
 
-               
+
                 conn = mysql.connect()
             	cursor = conn.cursor()
             	cursor.callproc('sp_getLikeStatus',(_wishId,_user))
-                
-                result = cursor.fetchall()		
+
+                result = cursor.fetchall()
 
                 return json.dumps({'status':'OK','total':result[0][0],'likeStatus':result[0][1]})
             else:
@@ -112,9 +112,9 @@ def getAllWishes():
             cursor = conn.cursor()
             cursor.callproc('sp_GetAllWishes',(_user,))
             result = cursor.fetchall()
-	    
 
-	    
+
+
             wishes_dict = []
             for wish in result:
                 wish_dict = {
@@ -124,21 +124,21 @@ def getAllWishes():
                         'FilePath': wish[3],
                         'Like':wish[4],
                         'HasLiked':wish[5]}
-                wishes_dict.append(wish_dict)		
+                wishes_dict.append(wish_dict)
 
-           
+
 
             return json.dumps(wishes_dict)
         else:
             return render_template('error.html', error = 'Unauthorized Access')
     except Exception as e:
         return render_template('error.html',error = str(e))
-    
+
 
 @app.route('/showDashboard')
 def showDashboard():
     return render_template('dashboard.html')
-    
+
 
 @app.route('/showSignin')
 def showSignin():
@@ -190,10 +190,10 @@ def deleteWish():
 def getWishById():
     try:
         if session.get('user'):
-            
+
             _id = request.form['id']
             _user = session.get('user')
-    
+
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.callproc('sp_GetWishById',(_id,_user))
@@ -220,7 +220,7 @@ def getWish():
             con = mysql.connect()
             cursor = con.cursor()
             cursor.callproc('sp_GetWishByUser',(_user,_limit,_offset,_total_records))
-            
+
             wishes = cursor.fetchall()
             cursor.close()
 
@@ -230,7 +230,7 @@ def getWish():
 
             outParam = cursor.fetchall()
 
-            
+
 
             response = []
             wishes_dict = []
@@ -242,8 +242,8 @@ def getWish():
                         'Date': wish[4]}
                 wishes_dict.append(wish_dict)
             response.append(wishes_dict)
-            response.append({'total':outParam[0][0]}) 
-                
+            response.append({'total':outParam[0][0]})
+
 
 
 
@@ -305,10 +305,10 @@ def updateWish():
             _isPrivate = request.form['isPrivate']
             _isDone = request.form['isDone']
 
-            
 
 
-            
+
+
 
             conn = mysql.connect()
             cursor = conn.cursor()
@@ -332,9 +332,9 @@ def validateLogin():
     try:
         _username = request.form['inputEmail']
         _password = request.form['inputPassword']
-        
 
-        
+
+
         # connect to mysql
 
         con = mysql.connect()
@@ -342,7 +342,7 @@ def validateLogin():
         cursor.callproc('sp_validateLogin',(_username,))
         data = cursor.fetchall()
 
-        
+
 
 
         if len(data) > 0:
@@ -353,7 +353,7 @@ def validateLogin():
                 return render_template('error.html',error = 'Wrong Email address or Password.')
         else:
             return render_template('error.html',error = 'Wrong Email address or Password.')
-            
+
 
     except Exception as e:
         return render_template('error.html',error = str(e))
@@ -371,9 +371,9 @@ def signUp():
 
         # validate the received values
         if _name and _email and _password:
-            
+
             # All Good, let's call MySQL
-            
+
             conn = mysql.connect()
             cursor = conn.cursor()
             _hashed_password = generate_password_hash(_password)
@@ -391,9 +391,9 @@ def signUp():
     except Exception as e:
         return json.dumps({'error':str(e)})
     finally:
-        cursor.close() 
+        cursor.close()
         conn.close()
 
 if __name__ == "__main__":
     app.debug = 'TRUE'
-    app.run(port=5000)
+    app.run(port=5001)

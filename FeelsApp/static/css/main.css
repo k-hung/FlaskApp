@@ -1,44 +1,39 @@
 body {
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
+  padding-top: 40px;
+  padding-bottom: 40px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
 }
- 
-/*
- * Create dark grey header with a white logo
- */
-  
-header {
-  background-color: #2B2B2B;
-  height: 35px;
-  width: 100%;
-  opacity: .9;
-  margin-bottom: 10px;
+
+
+/*Carousel slider*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+ }
+
+img {
+   opacity: 0.4;
+   filter: alpha(opacity=40); /* For IE8 and earlier */
 }
- 
-header h1.logo {
-  margin: 0;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  float: left;
+
+img:hover {
+   opacity: 1.0;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
 }
- 
-header h1.logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
- 
+
 /*
  * Center the body content
  */
-  
+
 .container {
   width: 940px;
   margin: 0 auto;
 }
- 
+
 div.jumbo {
   padding: 10px 0 30px 0;
   background-color: #eeeeee;
@@ -46,14 +41,14 @@ div.jumbo {
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
- 
+
 h2 {
   font-size: 3em;
   margin-top: 40px;
   text-align: center;
   letter-spacing: -2px;
 }
- 
+
 h3 {
   font-size: 1.7em;
   font-weight: 100;
@@ -66,20 +61,20 @@ h3 {
 /*
  * Display navigation links inline
  */
- 
+
 .menu {
   float: right;
   margin-top: 8px;
 }
- 
+
 .menu li {
   display: inline;
 }
- 
+
 .menu li + li {
   margin-left: 35px;
 }
- 
+
 .menu li a {
   color: #999;
   text-decoration: none;
@@ -92,7 +87,7 @@ form label {
   display: block;
   padding: 10px 0;
 }
- 
+
 form input#name,
 form input#email,
 form input#subject {
@@ -105,7 +100,7 @@ form input#subject {
   padding: 5px;
   font-size: 1.1em;
 }
- 
+
 form textarea#message {
   width: 500px;
   height: 100px;
@@ -118,17 +113,17 @@ form textarea#message {
   padding: 5px;
   font-size: 1.1em;
 }
- 
+
 form input#submit {
   display: block;
-  -webkit-border-radius: 3px; 
+  -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
   border:1px solid #d8d8d8;
-  padding: 10px; 
-  font-weight:bold; 
-  text-align: center; 
-  color: #000000; 
+  padding: 10px;
+  font-weight:bold;
+  text-align: center;
+  color: #000000;
   background-color: #f4f4f4;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
@@ -137,10 +132,10 @@ form input#submit {
   background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
 }
- 
+
 form input#submit:hover{
   cursor: pointer;
-  border:1px solid #c1c1c1; 
+  border:1px solid #c1c1c1;
   background-color: #dbdbdb;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
@@ -170,7 +165,7 @@ form input#password {
   padding: 10px;
   font-size: 1.5em;
 }
- 
+
 form input#password {
   margin-bottom: 10px;
 }

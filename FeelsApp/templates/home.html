@@ -1,6 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
       <div class="jumbotron">
+        <table>
+            <thead>
+              <th>uid</th>
+            </thead>
+
+            <tbody>
+              {%for users in users %}
+              <tr>
+                <td>{{ users.uid }}</td>
+                <td>{{ users.firstname }}</td>
+                <td>{{ users.lastname }}</td>
+              </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -23,7 +40,7 @@
               </div>
 
               <div class="item">
-                <img src="static/images/emo2.png" class = "img-circle img-responsive">
+                <img src="static/images/emo2.jpg" class = "img-circle img-responsive">
                 <div class="carousel-caption">
                   <h3 >Nerd</h3>
                   <p>2</p>
@@ -31,7 +48,7 @@
               </div>
 
               <div class="item">
-                <img src="static/images/emo3.png" class = "img-circle img-responsive">
+                <img src="static/images/emo3.jpg" class = "img-circle img-responsive">
                 <div class="carousel-caption">
                   <h3 >Happy</h3>
                   <p>3</p>
@@ -52,5 +69,5 @@
             </a>
           </div>
         <button type ="button" onclick="confirmSelection()"  class="btn btn-default btn-success"> Select Emotion </button>
-      </div>
+        </div>
 {% endblock %}
